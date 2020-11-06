@@ -1,4 +1,4 @@
-package ObserverFiles;
+package observerFiles;
 
 import java.io.File;
 
