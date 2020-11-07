@@ -4,6 +4,7 @@ import gui.MainScreen;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import observerFiles.EventManager;
 
 public class Principal extends Application{
 
@@ -14,6 +15,11 @@ public class Principal extends Application{
         primaryStage.setScene(primaryScene);
         primaryStage.setTitle("Observer Pattern App");
         primaryStage.show();
+	}
+	
+	@Override
+	public void init() throws Exception {
+		EventManager eventManager = new EventManager("color", "consola");
 	}
 	
 	public static void main(String[] args) {
