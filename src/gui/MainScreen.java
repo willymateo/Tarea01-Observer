@@ -44,7 +44,10 @@ public class MainScreen {
 		root.setCenter(vB_botones);
 		
 		//Eventos
-		
+		events();
+	}
+	
+	private void events() {
 		btn_ColorVerde.setOnMouseClicked((e)->{
 			//eventManager.notify(this);
 		});

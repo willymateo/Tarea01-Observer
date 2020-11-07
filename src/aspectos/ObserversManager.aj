@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import gui.MainScreen;
 import observerFiles.Observer;
+import javafx.scene.control.Button;
 
 public aspect ObserversManager {
 	
@@ -21,12 +22,13 @@ public aspect ObserversManager {
 	 	
 	}
 	
-	/*
-	pointcut changes() : call(* void (..));
 	
-	after(): changes() {
+	pointcut changes() : call(void setOnMouseClicked(..)) && target(Button) && within(MainScreen);
+		
+	
+	after() : changes(){
 		
 	}
-	*/
+	
 	
 }
