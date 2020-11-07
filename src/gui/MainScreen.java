@@ -12,7 +12,7 @@ import javafx.scene.layout.VBox;
 
 public class MainScreen {
 	private BorderPane root;
-	private Button btn_Color1, btn_Color2, btn_Color3;
+	private Button btn_ColorVerde, btn_ColorAqua, btn_ColorNaranja;
 	
 	public MainScreen() {
 		root = new BorderPane();
@@ -28,10 +28,10 @@ public class MainScreen {
 		HBox hB_Titulo = new HBox(new Label("Aplicación implementada con el patrón Observer y AOP"));
 		
 		//Botones
-		btn_Color1 = new Button("Verde");
-		btn_Color2 = new Button("Aqua");
-		btn_Color3 = new Button("Naranja");
-		VBox vB_botones = new VBox(btn_Color1, btn_Color2, btn_Color3);
+		btn_ColorVerde = new Button("Verde");
+		btn_ColorAqua = new Button("Aqua");
+		btn_ColorNaranja = new Button("Naranja");
+		VBox vB_botones = new VBox(btn_ColorVerde, btn_ColorAqua, btn_ColorNaranja);
 		
 		//Estilos
 		hB_Titulo.setAlignment(Pos.CENTER);
@@ -42,6 +42,20 @@ public class MainScreen {
 		//Asignación
 		root.setTop(hB_Titulo);
 		root.setCenter(vB_botones);
+		
+		//Eventos
+		
+		btn_ColorVerde.setOnMouseClicked((e)->{
+			//eventManager.notify(this);
+		});
+		
+		btn_ColorAqua.setOnMouseClicked((e)->{
+			//eventManager.notify(this);
+		});
+		
+		btn_ColorNaranja.setOnMouseClicked((e)->{
+			//eventManager.notify(this);
+		});
 	}
 	
 }
