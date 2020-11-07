@@ -3,8 +3,8 @@ package aspectos;
 import java.util.ArrayList;
 import java.util.List;
 import gui.MainScreen;
-import observerFiles.Observer;
 import javafx.scene.control.Button;
+import observers.Observer;
 
 public aspect ObserversManager {
 	
@@ -26,7 +26,7 @@ public aspect ObserversManager {
 	pointcut changes() : call(void setOnMouseClicked(..)) && target(Button) && within(MainScreen);
 		
 	
-	after() : changes(){
+	after(): changes(){
 		
 	}
 	
