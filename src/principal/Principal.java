@@ -1,5 +1,6 @@
-package gui;
+package principal;
 
+import gui.MainScreen;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;

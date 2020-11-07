@@ -3,6 +3,6 @@ package observerFiles;
 import java.io.File;
 
 public interface EvenListeners {
-	void update(String eventType, File file);
+	public void update(String eventType, File file);
 
 }
