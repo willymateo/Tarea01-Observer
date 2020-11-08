@@ -10,15 +10,11 @@ public class Principal extends Application{
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+		mainScreen = new MainScreen();
 		Scene primaryScene = new Scene(mainScreen.getRoot(), 1000, 600);
         primaryStage.setScene(primaryScene);
         primaryStage.setTitle("Observer Pattern App");
         primaryStage.show();
-	}
-	
-	@Override
-	public void init() throws Exception {
-		mainScreen = new MainScreen(); 
 	}
 	
 	public static void main(String[] args) {

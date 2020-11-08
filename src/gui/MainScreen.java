@@ -8,11 +8,13 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import observers.Eventos;
 
 
 public class MainScreen {
 	private BorderPane root;
 	private Button btn_ColorVerde, btn_ColorAqua, btn_ColorNaranja;
+	private Label titulo;
 	
 	public MainScreen() {
 		root = new BorderPane();
@@ -25,7 +27,9 @@ public class MainScreen {
 	
 	private void createView() {
 		//Titulo
-		HBox hB_Titulo = new HBox(new Label("Aplicación implementada con el patrón Observer y AOP"));
+		titulo = new Label("Aplicación implementada con el patrón Observer y AOP");
+		HBox hB_Titulo = new HBox(titulo);
+		hB_Titulo.setStyle("-fx-background-color: white");
 		
 		//Botones
 		btn_ColorVerde = new Button("Verde");
@@ -48,17 +52,22 @@ public class MainScreen {
 	}
 	
 	private void events() {
+		Eventos events = new Eventos();
+		
 		btn_ColorVerde.setOnMouseClicked((e)->{
-			//eventManager.notify(this);
+			events.proceed("green");
 		});
 		
 		btn_ColorAqua.setOnMouseClicked((e)->{
-			//eventManager.notify(this);
+			events.proceed("aqua");
 		});
 		
 		btn_ColorNaranja.setOnMouseClicked((e)->{
-			//eventManager.notify(this);
+			events.proceed("orange");
 		});
 	}
 	
+	public Label getTitulo() {
+		return titulo;
+	}
 }
