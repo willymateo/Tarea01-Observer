@@ -16,6 +16,9 @@ Pantalla cambia a naranja:
 ![image](https://user-images.githubusercontent.com/73257661/98456671-7d670000-214e-11eb-8c4c-04d3af883e00.png)
 
 Integrantes:
+
 Willy Mateo
+
 Lizbeth Vergara
+
 Matias Vasconez
