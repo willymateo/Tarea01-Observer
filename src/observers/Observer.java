@@ -4,5 +4,6 @@ import gui.MainScreen;
 
 public interface Observer {
 	
-	public void proceed(MainScreen mainscreen);
+	public void proceed(String color, MainScreen mainscreen);
+	
 }
